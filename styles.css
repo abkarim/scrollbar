@@ -1,0 +1,44 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+@keyframes oqtaveCustomTickerMoveLeft {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-49510px);
+    }
+}
+
+/* Main Container */
+.oqtave-custom-ticker-container {
+    background-color: aqua;
+    overflow-x: hidden;
+}
+
+/* Wrapper */
+.oqtave-custom-ticker-container .oqtave-custom-ticker-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    animation: oqtaveCustomTickerMoveLeft 492s infinite linear;
+    animation-direction: normal;
+    animation-delay: 1.5s;
+}
+
+.oqtave-custom-ticker-container .oqtave-custom-ticker-wrapper:hover {
+    animation-play-state: paused;
+}
+
+/* Ticker item */
+.oqtave-custom-ticker-container .oqtave-custom-ticker-wrapper .oqtave-custom-ticker-item {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+
