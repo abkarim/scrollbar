@@ -1,44 +1,100 @@
-html {
-    height: 100%;
+/* ! Variable will be added by javascript */
+:root {
+    --oqtave-custom-ticker-move-left-start: 100%;
+    --oqtave-custom-ticker-move-right-end: 100%;
 }
 
 body {
     margin: 0;
 }
 
+/* Move left animation */
 @keyframes oqtaveCustomTickerMoveLeft {
     0% {
-        transform: translateX(0px);
+        transform: translateX(var(--oqtave-custom-ticker-move-left-start));
     }
+
     100% {
-        transform: translateX(-49510px);
+        transform: translateX(var(--oqtave-custom-ticker-move-left-end));
+    }
+}
+
+/* Move left animation */
+@keyframes oqtaveCustomTickerMoveRight {
+    0% {
+        transform: translateX(var(--oqtave-custom-ticker-move-right-start));
+    }
+
+    100% {
+        transform: translateX(var(--oqtave-custom-ticker-move-right-end));
     }
 }
 
 /* Main Container */
 .oqtave-custom-ticker-container {
-    background-color: aqua;
+    background-color: var(--oqtave-custom-ticker-container-background-color);
     overflow-x: hidden;
+    position: relative;
 }
+
+/* Message section */
+.oqtave-custom-ticker-container .oqtave-custom-ticker-message-section {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--oqtave-custom-ticker-message-section-position-left);
+    right: var(--oqtave-custom-ticker-message-section-position-right);
+    background-color:  var(--oqtave-custom-ticker-message-section-background-color);
+    z-index: calc(var(--oqtave-custom-ticker-z-index, 2) + 1);
+}
+
+/* Message text */
+.oqtave-custom-ticker-container .oqtave-custom-ticker-message-section .oqtave-custom-ticker-message-text {
+    color: var(--oqtave-custom-ticker-message-text-color);
+    font-size: var(--oqtave-custom-ticker-message-font-size);
+    font-weight: var(--oqtave-custom-ticker-message-font-weight);
+    letter-spacing: var(--oqtave-custom-ticker-message-letter-spacing);
+    line-height: var(--oqtave-custom-ticker-message-line-height);
+    padding-top: var(--oqtave-custom-ticker-message-padding-top);
+    padding-bottom: var(--oqtave-custom-ticker-message-padding-bottom);
+    padding-left: var(--oqtave-custom-ticker-message-padding-left);
+    padding-right: var(--oqtave-custom-ticker-message-padding-right);
+}
+
 
 /* Wrapper */
 .oqtave-custom-ticker-container .oqtave-custom-ticker-wrapper {
     display: flex;
     flex-wrap: nowrap;
+    align-items: baseline;
+    flex-direction: row;
     gap: 1rem;
-    animation: oqtaveCustomTickerMoveLeft 492s infinite linear;
+    transform: translateX(var(--oqtave-custom-ticker-start));
+    animation: var(--oqtave-custom-ticker-animation-name, oqtaveCustomTickerMoveLeft) var(--oqtave-custom-ticker-animation-time) infinite linear;
     animation-direction: normal;
-    animation-delay: 1.5s;
+    animation-delay: var(--oqtave-custom-ticker-animation-delay, 0);
+    animation-play-state: var(--oqtave-custom-ticker-animation-state, paused);
 }
 
+/* Wrapper hover */
 .oqtave-custom-ticker-container .oqtave-custom-ticker-wrapper:hover {
-    animation-play-state: paused;
+    animation-play-state: var(--oqtave-custom-ticker-animation-on-hover);
 }
 
 /* Ticker item */
 .oqtave-custom-ticker-container .oqtave-custom-ticker-wrapper .oqtave-custom-ticker-item {
+    color:var(--oqtave-custom-ticker-item-text-color) ;
     display: inline-block;
+    font-size: var(--oqtave-custom-ticker-item-font-size);
+    font-weight: var(--oqtave-custom-ticker-item-font-weight);
+    letter-spacing: var(--oqtave-custom-ticker-item-letter-spacing);
+    line-height: var(--oqtave-custom-ticker-item-line-height);
     white-space: nowrap;
+    padding-top: var(--oqtave-custom-ticker-item-padding-top);
+    padding-bottom: var(--oqtave-custom-ticker-item-padding-bottom);
+    text-decoration: none;
 }
-
-
