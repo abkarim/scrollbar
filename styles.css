@@ -65,7 +65,6 @@ body {
     padding-right: var(--oqtave-custom-ticker-message-padding-right);
 }
 
-
 /* Wrapper */
 .oqtave-custom-ticker-container .oqtave-custom-ticker-wrapper {
     display: flex;

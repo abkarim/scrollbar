@@ -47,10 +47,10 @@ const itemPaddingBottom = '10px';
 
 // Message styling data
 const messageContainerBackgroundColor = 'white';
-const messageContainerPosition = 'left';
+const messageContainerPosition = 'right';
 const messageTextColor = 'black';
-const messageFontSize = '1.5rem';
-const messageFontWeight = 900;
+const messageFontSize = '1rem';
+const messageFontWeight = 800;
 const messageLetterSpacing = '1px';
 const messageLineHeight = '1.6em';
 const messagePaddingTop = '10px';
@@ -86,7 +86,14 @@ setPropertyOnDocument( '--oqtave-custom-ticker-message-section-background-color'
 setPropertyOnDocument( '--oqtave-custom-ticker-message-text-color', messageTextColor );
 setPropertyOnDocument( '--oqtave-custom-ticker-message-font-size', messageFontSize );
 setPropertyOnDocument( '--oqtave-custom-ticker-message-font-weight', messageFontWeight );
-
+// Spacing
+setPropertyOnDocument( '--oqtave-custom-ticker-message-letter-spacing', messageLetterSpacing );
+setPropertyOnDocument( '--oqtave-custom-ticker-message-line-height', messageLineHeight );
+// Padding
+setPropertyOnDocument( '--oqtave-custom-ticker-message-padding-top', messagePaddingTop );
+setPropertyOnDocument( '--oqtave-custom-ticker-message-padding-bottom', messagePaddingBottom );
+setPropertyOnDocument( '--oqtave-custom-ticker-message-padding-left', messagePaddingLeft );
+setPropertyOnDocument( '--oqtave-custom-ticker-message-padding-right', messagePaddingRight );
 
 
 // Get ticker wrapper
