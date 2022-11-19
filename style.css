@@ -1,0 +1,90 @@
+/* ! Variable will be added by javascript */
+:root {
+  --scrollbar-move-left-start: 100%;
+  --scrollbar-move-right-end: 100%;
+}
+
+/* Move left animation */
+@keyframes scrollbarMoveLeft {
+  0% {
+    transform: translateX(var(--scrollbar-move-left-start));
+  }
+  100% {
+    transform: translateX(var(--scrollbar-move-left-end));
+  }
+}
+
+/* Move left animation */
+@keyframes scrollbarMoveRight {
+  0% {
+    transform: translateX(var(--scrollbar-move-right-start));
+  }
+  100% {
+    transform: translateX(var(--scrollbar-move-right-end));
+  }
+}
+
+/* Main Container */
+.scrollbar-container {
+  background-color: yellow;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Message section */
+.scrollbar-container .scrollbar-message-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  background-color: red;
+  z-index: 10;
+}
+
+/* Message text */
+.scrollbar-container .scrollbar-message-section .scrollbar-message-text {
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 0.2ch;
+  padding: 1rem;
+}
+
+/* Wrapper */
+.scrollbar-container .scrollbar-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  flex-direction: row;
+  gap: 1rem;
+  animation: scrollbarMoveLeft var(--scrollbar-animation-time) infinite linear;
+  animation-direction: normal;
+  animation-delay: 0;
+  animation-play-state: running;
+}
+
+/* 
+* What happen on hover item
+*/
+.scrollbar-container .scrollbar-wrapper:hover {
+  animation-play-state: paused;
+}
+
+/* item */
+.scrollbar-container .scrollbar-wrapper .scrollbar-item {
+  color: black;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1rem;
+  white-space: nowrap;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+}
