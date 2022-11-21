@@ -1,8 +1,7 @@
 # Text scrolling 
 Scroll elements with css animation. JavaScript is only used for initiate the animation. This scrollbar works without affecting the site performance. 
 
-## Demo
-https://karim-scrollbar.netlify.app/ 
+## [Demo](https://karim-scrollbar.netlify.app/)
 
 ## Change text direction
 Change animation name **scrollbarMoveLeft** to **scrollbarMoveRight** in style.css
