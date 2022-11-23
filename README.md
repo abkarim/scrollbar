@@ -1,5 +1,5 @@
 # Text scrolling 
-Scroll elements with css animation. JavaScript is only used for initiate the animation. This scrollbar works without affecting the site performance. 
+Scroll elements with css animation. JavaScript is only used for initiate the animation. This scrollbar works without affecting the site performance. Click on the **star** to reach more people
 
 ## [Demo](https://karim-scrollbar.netlify.app/)
 
