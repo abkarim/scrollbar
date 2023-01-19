@@ -26,7 +26,7 @@
 
 /* Main Container */
 .scrollbar-container {
-  background-color: yellow;
+  background-color: #333;
   overflow: hidden;
   position: relative;
 }
