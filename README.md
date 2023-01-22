@@ -1,60 +1,71 @@
-# Text scrolling 
+# Text scrolling
+
 Scroll elements with css animation. JavaScript is only used for initiate the animation. This scrollbar works without affecting the site performance. Click on the **star** to reach more people
 
 ## [Demo](https://karim-scrollbar.netlify.app/)
 
 ## Change text direction
+
 Change animation name **scrollbarMoveLeft** to **scrollbarMoveRight** in style.css
 
 ```css
 /* Wrapper */
 .scrollbar-container .scrollbar-wrapper {
-    //...
-    animation: scrollbarMoveLeft 
-        var(--scrollbar-animation-time) 
-        infinite linear;
-    // ...
+  //...
+  animation: scrollbarMoveLeft var(--scrollbar-animation-time) infinite linear;
+  // ...
 }
 ```
+
 TO
 
 ```css
 /* Wrapper */
 .scrollbar-container .scrollbar-wrapper {
-    //...
-    animation: scrollbarMoveRight 
-        var(--scrollbar-animation-time) 
-        infinite linear;
-    // ...
+  //...
+  animation: scrollbarMoveRight var(--scrollbar-animation-time) infinite linear;
+  // ...
 }
 ```
 
 ## Change heading position
+
 Flip values of left and right in style.css
 
 ```css
 /* Message section */
 .scrollbar-container .scrollbar-message-section {
-    //...
+  //...
   left: 0;
   right: auto;
-    // ...
+  // ...
 }
 ```
+
 TO
 
 ```css
 /* Message section */
 .scrollbar-container .scrollbar-message-section {
-    //...
+  //...
   left: auto;
   right: 0;
-    // ...
+  // ...
 }
 ```
 
+## Change speed
+
+change speed in `script.js` file
+
+```javascript
+// Scrolling speed
+const speed = 0.5;
+```
+
 ## Handle hover state
-what happer when hover on a scrolling item
+
+what will happen when user hover over a scrolling item
 
 **Paused**
 
@@ -66,6 +77,7 @@ what happer when hover on a scrolling item
   animation-play-state: paused;
 }
 ```
+
 **Running**
 
 ```css
